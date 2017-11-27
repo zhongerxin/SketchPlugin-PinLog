@@ -13,12 +13,16 @@
       "name": "Pin",
       "identifier": "pinLog-pin",
       "shortcut": "ctrl shift p",
+      "icon": "icons/pin.png",
+      "description": "Pin a Log",
       "script": "pin.js"
     },
     {
       "name": "Log",
       "identifier": "pinLog-log",
       "shortcut": "ctrl shift n",
+      "icon": "icons/log.png",
+      "description": "Show logs",
       "script": "log.js"
     }
   ],

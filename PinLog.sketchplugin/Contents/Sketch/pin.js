@@ -95,7 +95,7 @@ exports['default'] = function (context) {
   alert.setMessageText("Pin a Log");
   alert.addButtonWithTitle("Save");
   alert.addButtonWithTitle("Cancel");
-  alert.setInformativeText("This save will your log and current scrollorigin");
+  alert.setInformativeText("This will save your log and current scrollorigin");
 
   var viewWidth = 400;
   var viewHeight = 90;
