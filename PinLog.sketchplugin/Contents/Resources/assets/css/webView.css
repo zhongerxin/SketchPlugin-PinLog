@@ -1,0 +1,233 @@
+html {
+  box-sizing: border-box;
+  background: transparent;
+
+  /* Prevent the page to be scrollable */
+  overflow: hidden;
+
+  /* Force the default cursor, even on text */
+  cursor: default;
+  /* background-color:black; */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  /* Prevent the content from being selectionable */
+  user-select: none; 
+}
+.main {
+  width: auto;
+  height: auto;
+  /* width: 240px;
+  height: 422px; */
+  /* background-color: #F6F6F6; */
+  padding-top: 1px;
+}
+.log-list {
+  list-style-type: none;
+  height: 382px;
+  padding-bottom: 24px;
+  overflow: scroll;
+}
+.log-list li {
+  margin: 8px 8px;
+  background-color:#FFFFFF;
+  display:block;
+  border-radius: 3px;
+  padding: 8px 8px 8px 30px;
+  font-size: 12px;
+  font-family: sans-serif;
+  line-height: 18px;
+  transition: box-shadow 0.2s ease-in-out;
+  animation: 0.3s ease-in-out showLi;
+  overflow: hidden;
+}
+
+.log-list .hideLi {
+  animation: 0.4s ease-in-out hideLi;
+}
+
+@keyframes showLi {
+  from {
+    transform: scale(1,1.2) translateY(40%);
+    opacity: 0.0;
+  }
+
+  to {
+    transform: scale(1,1) translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes hideLi {
+  from {
+    max-height: 80px;
+    margin: 8px 8px;
+    opacity: 1;
+    padding: 8px 8px 8px 30px;
+  }
+
+  to {
+    max-height: 0px;
+    margin: 0px 8px;
+    padding: 0px 8px 0px 30px;
+    opacity: 0;
+  }
+}
+
+.log-list li:hover{
+  cursor: pointer;
+  box-shadow: 0 5px 14px 0 rgba(0,0,0,0.20);
+  /* transition: padding 0.3s ease-in-out;
+  padding: 8px 8px 30px 30px; */
+}
+.log-list li:active{
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+  background-color: #FCFCFC;
+}
+.log-list li span {
+  overflow: hidden;
+  word-break: break-all;
+  color: #4B4B4B;
+}
+.log-list li .index {
+  width: 18px;
+  height: 16px;
+  color: #CCCCCC;
+  position: absolute;
+  font-weight: 500;
+  top: 8px;
+  left: 8px;
+}
+.log-list li .pin {
+  width: 8px;
+  height: 16px;
+  background-image: url(../images/icons/pin.png);
+  background-repeat: no-repeat;
+  background-size: 8px 16px;
+  position: absolute;
+  font-weight: 500;
+  left: 8px;
+  top: 8px;
+  color: rgba(255, 255, 255, 0);
+  animation: 0.25s ease-in-out zoomPin;
+}
+@keyframes zoomPin {
+  from {
+    transform: scale(0.1,0.1);
+    opacity: 0.0;
+    top: 16px;
+  }
+
+  to {
+    transform: scale(1,1);
+    opacity: 1;
+    top: 8px;
+  }
+}
+
+.log-list li .tool {
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.log-list li:hover .tool{
+  height: 20px;
+  margin-top: 4px;
+}
+
+.log-list li .tool button {
+  border: none;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 11px;
+  margin-left: 4px;
+  float: right;
+  background-color: #FFFFFF;
+  transition: background-color  0.2s ease-in-out;
+}
+.log-list li .tool button:hover {
+  cursor: pointer;
+}
+.log-list li .tool button:focus {
+  outline: none;
+}
+.log-list li .tool .edit {
+  color: #3DA8F5
+}
+.log-list li .tool .delete {
+  color: #A6A6A6
+}
+.log-list li .tool .edit:hover {
+  /* background-color: rgba(61, 168, 245, 0.1) */
+  background-color: rgba(166, 166, 166, 0.15)
+}
+.log-list li .tool .delete:hover {
+  background-color: rgba(166, 166, 166, 0.15) 
+}
+
+/* 这是底部的信息了 */
+
+.bottom {
+  height: 40px;
+  background: #FFFFFF;
+  box-shadow: inset 0 1px 0 0 #E5E5E5;
+  padding: 12px;
+  font-size: 12px;
+  font-family: sans-serif;
+  line-height: 16px;
+}
+
+.bottom #left-btn {
+  width: 70px;
+  height: 16px;
+  display: inline-block;
+  vertical-align:top;
+  transition: all 0.2s ease-in-out;
+}
+.bottom #left-btn:hover {
+  cursor: pointer;
+  filter: brightness(0.7) saturate(2.5);
+}
+
+.bottom #left-btn span {
+  height: 16px;
+  vertical-align:top;
+  text-align:center;
+  color: #3DA8F5;
+}
+.bottom #left-btn img {
+  width: 16px;
+  height: 16px;
+  vertical-align:top;
+}
+
+.bottom #left-btn:active {
+  transform: scale(0.95,0.95);
+}
+
+.bottom #right-btn {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+  display: inline-block;
+  vertical-align:top;
+  float: right;
+  transition: all 0.2s ease-in-out;
+}
+.bottom #right-btn img {
+  width: 16px;
+  height: 16px;
+  vertical-align:top;
+}
+.bottom #right-btn:hover {
+  cursor: pointer;
+  filter: brightness(0.5);
+}
+.bottom #right-btn:active {
+  transform: scale(0.92,0.92);
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>2-Edit/circle-plus</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="240" height="400" rx="4"></rect>
+        <filter x="-14.6%" y="-7.0%" width="129.2%" height="117.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-4" x="0" y="0" width="240" height="40"></rect>
+        <filter x="-0.2%" y="-1.2%" width="100.4%" height="102.5%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.898039216   0 0 0 0 0.898039216   0 0 0 0 0.898039216  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-6" points="0 16 16 16 16 0 0 0"></polygon>
+        <path d="M8.48007479,10.6665918 C8.48007479,10.9313326 8.26511433,11.146293 7.99980787,11.1468587 C7.86743748,11.1468587 7.74751217,11.0925529 7.6609623,11.0060031 C7.57384674,10.9188875 7.52010663,10.7995279 7.51954094,10.6665918 L7.52010663,8.48021764 L5.33316677,8.48021764 C5.20079639,8.48021764 5.08087108,8.42591184 4.99432121,8.33936197 C4.90720565,8.25224641 4.85346553,8.13288679 4.85346553,8.0005164 C4.85346553,7.73464425 5.068426,7.51968378 5.33373246,7.52024947 L7.52010663,7.51968378 L7.52010663,5.3338753 C7.52010663,5.06800315 7.7345014,4.85360838 8.00037355,4.85360838 C8.26511433,4.85360838 8.48007479,5.06856884 8.48007479,5.33330962 L8.48007479,7.52024947 L10.666449,7.51968378 C10.9317554,7.52024947 11.1467159,7.73520993 11.1467159,7.99995071 C11.1461502,8.26525717 10.9317554,8.47965195 10.666449,8.48021764 L8.48007479,8.47965195 L8.48007479,10.6665918 L8.48007479,10.6665918 Z M8.00032,1.59968 C4.46512,1.59968 1.60032,4.46528 1.60032,7.99968 C1.60032,11.53488 4.46512,14.39968 8.00032,14.39968 C11.53472,14.39968 14.40032,11.53488 14.40032,7.99968 C14.40032,4.46528 11.53472,1.59968 8.00032,1.59968 L8.00032,1.59968 Z" id="path-8"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-5" transform="translate(-12.000000, -372.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                <use fill="#F6F6F6" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="Group" mask="url(#mask-2)">
+                <g transform="translate(8.000000, 27.000000)" id="Group-Copy-6">
+                    <g transform="translate(0.000000, 300.000000)">
+                        <rect id="Rectangle-2" fill="#FFFFFF" x="0" y="0" width="224" height="52" rx="2"></rect>
+                    </g>
+                </g>
+            </g>
+            <g id="Group-4" mask="url(#mask-2)">
+                <g transform="translate(0.000000, 360.000000)">
+                    <g id="Rectangle-3">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                    </g>
+                    <g id="Group-2" stroke-width="1" fill-rule="evenodd" transform="translate(12.000000, 12.000000)">
+                        <g id="2-Edit/circle-plus">
+                            <g id="icon-circle-plus">
+                                <mask id="mask-7" fill="white">
+                                    <use xlink:href="#path-6"></use>
+                                </mask>
+                                <g></g>
+                                <mask id="mask-9" fill="white">
+                                    <use xlink:href="#path-8"></use>
+                                </mask>
+                                <use fill="#A6A6A6" xlink:href="#path-8"></use>
+                                <g id="color/06-B50" mask="url(#mask-9)" fill="#3DA8F5">
+                                    <polygon id="color" points="0 16 16 16 16 0 0 0"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

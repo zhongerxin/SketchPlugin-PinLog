@@ -1,0 +1,34 @@
+{
+  "name": "Pin Log",
+  "description": "Easy pin and easy Log ",
+  "author": "Twox",
+  "authorEmail": "zhongxin123456@gmail.com",
+  "homepage": "zhonger.xin",
+  "version": 1,
+  "identifier": "com.example.sketch.pinLog",
+  "compatibleVersion": 1,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Pin",
+      "identifier": "pinLog-pin",
+      "shortcut": "ctrl shift p",
+      "script": "pin.js"
+    },
+    {
+      "name": "Log",
+      "identifier": "pinLog-log",
+      "shortcut": "ctrl shift n",
+      "script": "log.js"
+    }
+  ],
+  "menu": {
+    "title": "📌 Pin Log",
+    "items": [
+      "pinLog-pin",
+      "pinLog-log"
+    ]
+  },
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml"
+}
