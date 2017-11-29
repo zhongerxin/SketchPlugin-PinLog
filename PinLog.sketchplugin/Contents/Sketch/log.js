@@ -101,30 +101,6 @@ exports["default"] = function (context) {
   // If there's already a panel, prevent the plugin from running
   if (threadDictionary[identifier]) return;
 
-  function setSaveAction(button, field, id) {
-    button.setCOSJSTargetFunction(function (sender) {
-      var position = positions[id];
-      var newPosition = {
-        scroll: {
-          x: position.scroll.x,
-          y: position.scroll.y
-        },
-        viewFrame: {
-          x: position.viewFrame.x,
-          y: position.viewFrame.y,
-          width: position.viewFrame.width,
-          height: position.viewFrame.height
-        },
-        zoom: position.zoom,
-        page: position.page,
-        info: field.stringValue()
-      };
-      positions.splice(id, 1, newPosition);
-      doc.showMessage("保存成功");
-      command.setValue_forKey_onLayer_forPluginIdentifier(positions, 'positions', docData, 'my-command-identifier');
-    });
-  }
-
   // Panel --------------------------------------------------
   // size
   var panelWidth = 240;
@@ -136,7 +112,7 @@ exports["default"] = function (context) {
   panelY = newViewportFrame.size.height - panelHeight + windowFrame.origin.y;
   panel.setFrame_display(NSMakeRect(panelX, panelY, panelWidth, panelHeight), true);
   panel.setBackgroundColor(NSColor.whiteColor());
-  panel.title = "Log";
+  panel.title = "Pin Log";
   panel.titlebarAppearsTransparent = true;
   //panel.center();
   panel.makeKeyAndOrderFront(null);
@@ -252,6 +228,7 @@ exports["default"] = function (context) {
     var id = Number(data.index);
     positions.splice(id, 1);
     command.setValue_forKey_onLayer_forPluginIdentifier(JSON.stringify(positions), 'positions', docData, 'my-command-identifier');
+    doc.showMessage("Delete successfully");
   }
 
   function editPin(data) {
@@ -261,10 +238,10 @@ exports["default"] = function (context) {
     //alert
     var alert = COSAlertWindow["new"]();
     alert.setIcon(iconImage);
-    alert.setMessageText("Edit your log");
+    alert.setMessageText("Edit a pin");
     alert.addButtonWithTitle("Save");
     alert.addButtonWithTitle("Cancel");
-    alert.setInformativeText("This just save your log");
+    alert.setInformativeText("Edit the note for the original artboard location");
 
     var viewWidth = 400;
     var viewHeight = 90;
@@ -282,7 +259,7 @@ exports["default"] = function (context) {
       newPosition.info = String(field.stringValue());
       positions.splice(id, 1, newPosition);
       command.setValue_forKey_onLayer_forPluginIdentifier(JSON.stringify(positions), 'positions', docData, 'my-command-identifier');
-      doc.showMessage("Eidted Success");
+      doc.showMessage("Edit successfully");
       var newInfo = {
         "info": newPosition.info
       };
@@ -305,16 +282,16 @@ exports["default"] = function (context) {
     // alert
     var alert = COSAlertWindow["new"]();
     alert.setIcon(iconImage);
-    alert.setMessageText("Pin a Log");
+    alert.setMessageText("Pin a location");
     alert.addButtonWithTitle("Save");
     alert.addButtonWithTitle("Cancel");
-    alert.setInformativeText("This will save your log and current scrollorigin");
+    alert.setInformativeText("Write a short description of the edits you made");
 
     var viewWidth = 400;
     var viewHeight = 90;
     var alertView = NSView.alloc().initWithFrame(NSMakeRect(0, 0, viewWidth, viewHeight));
     var field = NSTextField.alloc().initWithFrame(NSMakeRect(0, viewHeight - 80, viewWidth - 102, 80));
-    field.placeholderString = "Input your Log here";
+    field.placeholderString = "Add a note for the current location";
 
     alertView.addSubview(field);
     alert.alert().window().setInitialFirstResponder(field);
@@ -349,7 +326,7 @@ exports["default"] = function (context) {
       }
       positions = command.valueForKey_onLayer_forPluginIdentifier('positions', docData, 'my-command-identifier');
       windowObject.evaluateWebScript("addLastPin('" + positions + "')");
-      doc.showMessage("Added a Pin");
+      doc.showMessage("Pin Added");
     } else {
       return;
     }

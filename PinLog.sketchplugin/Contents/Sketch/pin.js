@@ -92,17 +92,17 @@ exports['default'] = function (context) {
   // alert
   var alert = COSAlertWindow['new']();
   alert.setIcon(iconImage);
-  alert.setMessageText("Pin a Log");
+  alert.setMessageText("Pin a location");
   alert.addButtonWithTitle("Save");
   alert.addButtonWithTitle("Cancel");
-  alert.setInformativeText("This will save your log and current scrollorigin");
+  alert.setInformativeText("Write a short description of the edits you made");
 
   var viewWidth = 400;
   var viewHeight = 90;
   var alertView = NSView.alloc().initWithFrame(NSMakeRect(0, 0, viewWidth, viewHeight));
 
   var field = NSTextField.alloc().initWithFrame(NSMakeRect(0, viewHeight - 80, viewWidth - 102, 80));
-  field.placeholderString = "Input your Log here";
+  field.placeholderString = "Add a note for the current location";
 
   alertView.addSubview(field);
   alert.alert().window().setInitialFirstResponder(field);
@@ -133,7 +133,7 @@ exports['default'] = function (context) {
       positions.push(newPosition);
       command.setValue_forKey_onLayer_forPluginIdentifier(JSON.stringify(positions), 'positions', docData, 'my-command-identifier');
     }
-    doc.showMessage("Added a Pin");
+    doc.showMessage("Pin Added");
   } else {
     return;
   }

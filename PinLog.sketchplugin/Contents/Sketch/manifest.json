@@ -10,7 +10,7 @@
   "bundleVersion": 1.1,
   "commands": [
     {
-      "name": "Pin",
+      "name": "Add Pin",
       "identifier": "pinLog-pin",
       "shortcut": "ctrl shift p",
       "icon": "icons/pin.png",
@@ -18,7 +18,7 @@
       "script": "pin.js"
     },
     {
-      "name": "Log",
+      "name": "Show Log",
       "identifier": "pinLog-log",
       "shortcut": "ctrl shift n",
       "icon": "icons/log.png",
@@ -34,5 +34,5 @@
     ]
   },
   "disableCocoaScriptPreprocessor": true,
-  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml"
+  "appcast": "https://raw.githubusercontent.com/zhongerxin/PinLog/master/.appcast.xml"
 }
