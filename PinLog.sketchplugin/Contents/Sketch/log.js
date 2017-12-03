@@ -209,6 +209,7 @@ exports["default"] = function (context) {
         doc.setCurrentPage(page);
       }
     });
+    newViewportFrame = view.frame();
     var newScrollX = position.scroll.x - (position.viewFrame.width - newViewportFrame.size.width) / 2;
     var newScrollY = position.scroll.y - (position.viewFrame.height - newViewportFrame.size.height) / 2;
     var newOrigin = NSMakePoint(newScrollX, newScrollY);
