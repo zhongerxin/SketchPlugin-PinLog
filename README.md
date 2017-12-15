@@ -8,7 +8,7 @@ Pin a location and locate the Log.
 
 #### Manual Installation
 
-1. [Download](https://github.com/zhongerxin/PinLog/releases/download/v1.1/PinLog.sketchplugin.zip) PinLog.sketchplugin
+1. [Download](https://github.com/zhongerxin/SketchPlugin-PinLog/releases) PinLog.sketchplugin
 
 2. Move the PinLog plugin into your Plugins folder or double-click the .sketchplugin file.
 
